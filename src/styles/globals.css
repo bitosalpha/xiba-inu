@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+    --background-image: url(/public/bg-dark.png);
+  }
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.sidebar {
+  position: relative;
+  width: 300px;
+  background-color: #333333;
+}
+
+.social-icons {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: transparent;
+  gap: 10px;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+}
+
+.social-icon img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.animated-bg {
+  animation: gradientAnimation 10s infinite alternate;
+}
+
+body {
+  color: white;
+  background: #020101;
+}
+
+.darkpribg {
+  color: white;
+  background-clip: transparent;
+}
